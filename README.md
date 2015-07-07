@@ -12,12 +12,16 @@ export BROWSERSTACK_API='<key>'
 ```
 
 #### Getting Started
-```
+```shell
 npm -g uninstall gulp --save
 npm -g i gulp#3.9 // ensure the version is 3.9
 npm i
 gulp // runs dev build (lints files, starts webpack-dev-server, opens webpage at localhost:3001) with livereload for JS
 gulp -e prod // runs prod build => uglifies JS
+```
+
+#### Gulp Tasks
+```shell
 gulp mocha // while server is running in separate tab, runs all tests
 gulp mocha -f something-spec // runs the test for test/**/something-spec.js
 gulp mocha:e2e // run e2e tests with *-phantom-spec.js filepath => must have local server running

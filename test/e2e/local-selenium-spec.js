@@ -54,6 +54,14 @@ describe('local homepage', function() {
       return client.isVisible('#viewport').should.eventually.be.true;
     });
 
+    it('check that the #viewport element has the value Up', () => {
+      return client.waitUntil(() => {
+        return client.getText('#viewport').then((text) => {
+          return text === 'Up';
+        });
+      }).should.eventually.be.true;;
+    });
+
     after(function() {
         return client.end();
     });

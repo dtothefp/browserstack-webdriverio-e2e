@@ -18,6 +18,9 @@ fetch('http://www.omdbapi.com/?t=up&y=&plot=short&r=json')
     return res.json();
   }).then(function(json) {
     emit(json);
+    let viewport = document.getElementById('viewport');
+    viewport.innerHTML = json.Title;
+    console.log('title', json.Title);
     console.log('RES PROMISE RESOLVED', json);
   })
   .catch((err) => {

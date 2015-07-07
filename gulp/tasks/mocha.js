@@ -1,0 +1,20 @@
+import {resolve, join} from 'path';
+
+export default function(gulp, plugins, config) {
+  var {testPaths, file} = config;
+  var {mocha, exit} = plugins;
+  let babelPath = resolve(__dirname, '..', 'config/babelhook');
+  var src = file ? join(process.cwd(), 'test/**/', `${file}.js`) : testPaths;
+
+  return () => {
+    return gulp.src([
+        src,
+        '!' + join(process.cwd(), 'test/**/*-{selenium,karma}-spec.js')
+      ])
+      .pipe(mocha({
+        timeout: 40000,
+        require: [ babelPath ]
+      }))
+      .pipe(exit());
+  };
+}

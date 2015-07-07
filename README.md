@@ -5,7 +5,8 @@
 - go to [Browserstack](https://www.browserstack.com) and create an accout
 - go to [Browserstack Automate](https://www.browserstack.com/automate) and copy `username` and `key`
 - in `.bash_profile` or `.zshrc`
-- when you first run `gulp selenium` you may be prompted to download the [JAVA Runtime](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) *This may be an incorrect link, hopefully it will prompt you for what you need*
+- when you first run `gulp selenium` you may be prompted to download the [JAVA Runtime](https://support.apple.com/kb/DL1572?locale=en_US)
+- install [JAVA Runtime](https://support.apple.com/kb/DL1572?locale=en_US) specific for [Yosemite](http://fredericiana.com/2014/10/21/osx-yosemite-java-runtime-environment/)
 ```shell
 export BROWSERSTACK_USERNAME='<username>'
 export BROWSERSTACK_API='<key>'
@@ -35,7 +36,12 @@ gulp karma -e prod // run Karma integration tests on BrowserStack with the [karm
 
 #### Cool Stuff
 - [webdriverio](http://webdriver.io/) drives our selenium tests, promise or es6 generator API
+- [WD](http://admc.io/wd/) another hipster webdriver client
 - when running gulp selenium:tunnel can [Live](https://www.browserstack.com/start) view local site in various browsers on BrowserStack
+- some links that helped me integrate WebriverIO with BrowserStack
+
+https://github.com/browserstack/automate-node-samples/blob/master/LocalSample.js
+https://github.com/webdriverio/webdriverio/issues/551
 
 ## Testing Philosophies
 ![](https://www-static2.strongloop.com/wp-content/uploads/2015/03/975x703xpyramid.png.pagespeed.ic.Ozn480glOj.png)

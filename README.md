@@ -20,18 +20,25 @@ gulp // runs dev build (lints files, starts webpack-dev-server, opens webpage at
 gulp -e prod // runs prod build => uglifies JS
 gulp mocha // while server is running in separate tab, runs all tests
 gulp mocha -f something-spec // runs the test for test/**/something-spec.js
+gulp mocha:e2e // run e2e tests with *-phantom-spec.js filepath => must have local server running
 gulp test // must have server NOT running, runs all tests
 gulp selenium // run e2e tests from local selenium server => must have local server running
 gulp selenium:tunnel // run e2e tests from BrowserStack selenium server using local IP => must have local server running
 gulp selenium -e prod // run e2e tests from BrowserStack selenium server using hosted IP
+gulp karma // run integration tests with Karma using Webapck pre-processor
+gulp karma -e prod // run Karma integration tests on BrowserStack with the [karma-browserstack-launcher](https://github.com/karma-runner/karma-browserstack-launcher)
 ```
+
+#### Cool Stuff
+- [webdriverio](http://webdriver.io/) drives our selenium tests, promise or es6 generator API
+- when running gulp selenium:tunnel can [Live](https://www.browserstack.com/start) view local site in various browsers on BrowserStack
 
 ## Testing Philosophies
 ![](https://www-static2.strongloop.com/wp-content/uploads/2015/03/975x703xpyramid.png.pagespeed.ic.Ozn480glOj.png)
 
 #### TODO:
+- add task strictly for opening BrowserStack tunnel for Live viewing
 - add environmental specific eslint rules
 - agree on useful eslint rules
-- add Karma testing with Browserstack
 - add React .jsx support
 - probably lots of other stuff

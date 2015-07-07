@@ -34,8 +34,8 @@ var devConfig = {
 var prodConfig = {
   // global config of your BrowserStack account
   browserStack: {
-    username: 'davidfoxpowell1',
-    accessKey: 'NjCHjZZp3bmzaDqz6DST'
+    username: process.env.BROWSERSTACK_USERNAME,
+    accessKey: process.env.BROWSERSTACK_API
   },
 
   // define browsers

@@ -1,2 +1,2 @@
-var context = require.context('../../../test', true, /-karma-spec\.js$/);
+var context = require.context('../../../test/integration', true, /-karma-spec\.js$/);
 context.keys().forEach(context);

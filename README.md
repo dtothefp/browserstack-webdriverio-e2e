@@ -5,6 +5,7 @@
 - go to [Browserstack](https://www.browserstack.com) and create an accout
 - go to [Browserstack Automate](https://www.browserstack.com/automate) and copy `username` and `key`
 - in `.bash_profile` or `.zshrc`
+- when you first run `gulp selenium` you may be prompted to download the [JAVA Runtime](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) *This may be an incorrect link, hopefully it will prompt you for what you need*
 ```shell
 export BROWSERSTACK_USERNAME='<username>'
 export BROWSERSTACK_API='<key>'
